@@ -428,7 +428,7 @@ form button:hover {
   margin-right: 0.5rem;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 480px) {
   header {
     padding: 0 1.5rem;
     position: relative;
@@ -472,7 +472,7 @@ form button:hover {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 78px;
+    top: 66px;
     left: -100%;
     background: #186498;
     z-index: 10;
@@ -509,15 +509,15 @@ form button:hover {
   }
 
   .main-section {
+    padding: 60px 1.5rem;
     margin: 0;
-    grid-template-columns: 328px;
+    grid-template-columns: 1fr;
     gap: 30px;
   }
 
   .social-links {
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 30px;
   }
 
   .social-links a i {
@@ -545,16 +545,16 @@ form button:hover {
   .info-main-section h1::after {
     content: '';
     display: inline-block;
-    width: 163px;
+    width: 106px;
     height: 4px;
     background: #186498;
     position: relative;
-    left: 46px;
+    right: 0;
     bottom: 5px;
   }
 
   .info-main-section h2 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 
   .btn-section {
@@ -623,7 +623,7 @@ form button:hover {
   }
 
   .grid-products {
-    grid-template-columns: 328px;
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
   }
 
@@ -672,12 +672,13 @@ form button:hover {
   }
 
   form {
-    width: 328px;
+    width: 100%;
+    padding: 0 1.5rem;
   }
 
   form input,
   textarea {
-    width: 328px;
+    width: 100%;
     box-sizing: border-box;
   }
 
