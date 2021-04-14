@@ -51,6 +51,15 @@ header {
   padding: 0 4rem;
 }
 
+.brand {
+  max-width: 100%;
+  height: auto;
+}
+
+.btn-menu {
+  display: none;
+}
+
 .main-nav ul {
   display: flex;
   flex-direction: row;
@@ -224,8 +233,12 @@ header {
 }
 
 .quality-section div {
-  max-width: 300px;
+  max-width: 400px;
   text-align: center;
+}
+
+.quality-section h4 {
+  margin-bottom: 1rem;
 }
 
 .quality-section i {
@@ -413,4 +426,287 @@ form button:hover {
 
 .footer li i {
   margin-right: 0.5rem;
+}
+
+@media only screen and (max-width: 400px) {
+  header {
+    padding: 0 1.5rem;
+    position: relative;
+    background-color: #0f5381;
+  }
+
+  .brand {
+    max-width: 60%;
+    height: auto;
+  }
+
+  .btn-menu {
+    display: block;
+    border: 2px solid #fdfcfc;
+    outline: none;
+    border-radius: 5px;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.5s ease;
+    position: absolute;
+    right: 24px;
+  }
+
+  .btn-menu i {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    color: #fdfcfc;
+  }
+
+  .btn-menu:active,
+  .btn-menu.active {
+    background-color: #fdfcfc;
+  }
+
+  .btn-menu:active i,
+  .btn-menu.active i {
+    color: #186498;
+  }
+
+  .main-nav ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 78px;
+    left: -100%;
+    background: #186498;
+    z-index: 10;
+    transition: 0.5s ease;
+  }
+
+  .main-nav ul.active {
+    left: 0;
+  }
+
+  .main-nav ul li {
+    width: 200px;
+    margin: 0;
+    padding: 1.2rem;
+    border-bottom: 1px solid #fdfcfc;
+    transition: 0.5s ease;
+  }
+
+  .main-nav ul li:last-child {
+    border-bottom: none;
+  }
+
+  .main-nav ul li a {
+    color: #fdfcfc;
+  }
+
+  .main-nav ul li:active {
+    background: #fdfcfc;
+    border-bottom: 1px solid #fdfcfc;
+  }
+
+  .main-nav ul li:active a {
+    color: #186498;
+  }
+
+  .main-section {
+    margin: 0;
+    grid-template-columns: 328px;
+    gap: 30px;
+  }
+
+  .social-links {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+
+  .social-links a i {
+    margin: 1rem 0;
+    font-size: 1.6rem;
+    color: #186498;
+  }
+
+  .social-links a i:hover {
+    filter: brightness(80%);
+  }
+
+  .social-links::after,
+  .social-links::before {
+    height: 4px;
+    width: 65px;
+    position: relative;
+    top: 28px;
+  }
+
+  .info-main-section h1 {
+    font-size: 2rem;
+  }
+
+  .info-main-section h1::after {
+    content: '';
+    display: inline-block;
+    width: 163px;
+    height: 4px;
+    background: #186498;
+    position: relative;
+    left: 46px;
+    bottom: 5px;
+  }
+
+  .info-main-section h2 {
+    font-size: 1.4rem;
+  }
+
+  .btn-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4rem;
+  }
+
+  .btn {
+    padding: 1rem 3.5rem;
+    font-size: 1.2rem;
+  }
+
+  .btn-alt {
+    margin-top: 1rem;
+  }
+
+  .carousel {
+    position: relative;
+    width: 100%;
+    height: 375px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.09);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carousel-item {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .carousel-item img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+
+  .about-section {
+    padding: 60px 1.5rem;
+  }
+
+  .about-section h3 {
+    margin-bottom: 2rem;
+  }
+
+  .quality-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 4rem;
+  }
+
+  .quality-section div {
+    margin-bottom: 4rem;
+  }
+
+  .products-section {
+    padding: 60px 1.5rem;
+  }
+
+  .products-section h3 {
+    margin-bottom: 2rem;
+  }
+
+  .grid-products {
+    grid-template-columns: 328px;
+    grid-template-rows: auto;
+  }
+
+  .column1 {
+    height: auto;
+  }
+
+  .column2 {
+    height: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .column2 a {
+    height: auto;
+  }
+
+  .column2 a:first-child {
+    grid-column: 1;
+    height: auto;
+  }
+
+  .column3 {
+    grid-column: 1;
+    height: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .link-grid h4 {
+    max-width: 250px;
+    text-align: center;
+  }
+
+  .contact-section {
+    padding: 60px 1.5rem;
+    background: #186498;
+    color: #fdfcfc;
+  }
+
+  .contact-section h3 {
+    margin-bottom: 2rem;
+  }
+
+  .contact-section p {
+    text-align: left;
+    margin-bottom: 3rem;
+  }
+
+  form {
+    width: 328px;
+  }
+
+  form input,
+  textarea {
+    width: 328px;
+    box-sizing: border-box;
+  }
+
+  form button {
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+  }
+
+  .footer {
+    padding: 60px 1.5rem 5px;
+    grid-template-columns: 328px;
+    gap: 40px;
+  }
+
+  .footer img {
+    margin: 0 auto;
+  }
+
+  .footer small {
+    grid-row: 4;
+  }
+
+  .footer li {
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+
+  .footer li i {
+    margin-right: 0.5rem;
+  }
 }
